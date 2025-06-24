@@ -19,4 +19,4 @@
 ###标准输入输出接口
 在闭门造车的时候，根本没有想过接口格式问题，就算如此，在最开始的阶段，也和我们下游demo的同事花了一阵子时间在对其接口格式上，目前还比较常用的接口是 completion和chatcompletion接口, Body分别是prompt和message，如果让我来面试部署测试的小伙伴，让他写出一个合法的body会是我最愿意提问的第一个问题，它直接反应了面试者有没有亲手写过query，抄过无数个query之后，Model和Message的格式基本就很难被忘记了。
 ###推理框架
-很快我们就从闭门造车接入了国际正规，引入了vLLM,这是一个标准化且广泛使用的推理框架，它支持大部分市面上的开源模型，支持张量并行和流水线并行并保持超高的吞吐量，在批量推理的过程里，我推荐参考这篇文章对vLLM的内部原理有一些初步理解。https://www.runpod.io/blog/introduction-to-vllm-and-pagedattention![image](https://github.com/user-attachments/assets/baa7bbd4-597b-4d09-a7f4-57d57645cee9)对于部署的用户来说，安装环境，使用docker拉下最新的vLLM的框架，在github vLLM issue里查看模型的支持情况，基本就能起一个服务了。
+很快我们就从闭门造车接入了国际正规，引入了vLLM,这是一个标准化且广泛使用的推理框架，它支持大部分市面上的开源模型，支持张量并行和流水线并行并保持超高的吞吐量，在批量推理的过程里，我推荐参考这篇文章对vLLM的内部原理有一些初步理解。https://www.runpod.io/blog/introduction-to-vllm-and-pagedattention![image](https://github.com/user-attachments/assets/baa7bbd4-597b-4d09-a7f4-57d57645cee9) 对于部署的用户来说，安装环境，使用docker拉下最新的vLLM的框架，在github vLLM issue里查看模型的支持情况，基本就能起一个服务了。
