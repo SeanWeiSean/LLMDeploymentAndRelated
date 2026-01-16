@@ -141,6 +141,7 @@ LLM 在收到用户请求时，会先调用 `activate_deploy_tools`，它会展�
 ## 总结
 
 这套 **Agent + Workflow + MCP** 的混合架构，已经能够在一定程度上辅助我们完成模型的部署和测试工作。
+<img width="715" height="915" alt="image" src="https://github.com/user-attachments/assets/ef8ed383-cae3-487b-baa1-70a46bbeaa3c" />
 
 ### 待解决的问题
 
