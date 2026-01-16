@@ -152,4 +152,6 @@ LLM 在收到用户请求时，会先调用 `activate_deploy_tools`，它会展�
 - **模型依赖性强**：MCP 服务强依赖于底层模型的可用性
 - **Agent 不确定性**：Agent 任务的成功率和结果仍有波动
 
+<img width="2096" height="225" alt="image" src="https://github.com/user-attachments/assets/e0eac428-f9f0-4e9d-946e-a76875a44d28" />
+
 好用不好用？等我们 LLM Serving Team 自己先用一个月再来反馈吧。
