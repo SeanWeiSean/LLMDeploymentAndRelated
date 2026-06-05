@@ -12,7 +12,7 @@ Wan2.2-14B 在内部集群正常部署，Worker 也能正常消费 MQ 消息，�
 
 ![压测期间打接口拿到的 nvidia-smi，显存一路往上走，空闲也没清干净](images/5a9c8e3a93c69cd28cc1550588494ac0.png)
 
-![改了 complete 逻辑、加了显存日志，最后加上 expandable_segments 这个环境变量就好了](images/1312cffd878e07bbfa67295fdadfbbc9.png)
+![改了 complete 逻辑、加了显存日志，最后加上 expandable_segments 这个环境变量就好了]
 
 所以根因不是泄漏，是碎片化。expandable_segments 会让 PyTorch 的分配器改用一段可增长的虚拟地址来 back 显存，不再要求大块连续的物理段，碎片自然就缓解了。视频扩散模型每个请求的分辨率、帧数、序列长度都在变，分配出来的显存块尺寸很杂，本来就是最容易碎片化的场景。
 
